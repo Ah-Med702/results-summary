@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap');
+
+:root {
+    --Light-red: #ff5757;
+    --Orangey-yellow: #ffb01f;
+    --Green-teal: #00bd91;
+    --Cobalt-blue: #1125d4;
+
+    /* ================================================ */
+    /* ================== background ================== */
+    /* ================================================ */
+
+    --Light-slate-blue: #7857ff;
+    --Light-royal-blue: #2e2be9;
+    --Violet-blue-: #4e21ca;
+    --Persian-blue: #2421ca00;
+    --Cobalt-blue: #1125d4;
+
+    /* ================================================ */
+    /* ================== Neutral ================== */
+    /* ================================================ */
+
+    --White: #ffffff;
+    --Pale-blue: #ebf1ff;
+    --Light-lavender: #c8c7ff;
+    --Dark-gray-blue: #303b5a;
+
+    /* ================================================ */
+    --P-font-size: 18px
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Hanken Grotesk', sans-serif;
+}
+
+.container {
+    display: flex;
+    width: 600px;
+    box-shadow: 5px 10px 20px #e7e7e7;
+    border-radius: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.container>.result {
+    background-image: linear-gradient(#7857ff, #2e2be9);
+    flex: 1;
+    border-radius: 20px;
+    color: var(--White);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.container>.result .header {
+    color: var(--Light-lavender);
+    font-size: var(--P-font-size);
+}
+
+.container>.result .result-box {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    color: var(--Light-lavender);
+    background-image: linear-gradient(#4e21ca, #2421ca00);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.container>.result .result-box span {
+    font-size: 40px;
+    font-weight: 700;
+    color: var(--White);
+}
+
+.container>.result .result-status {
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.container>.result p {
+    color: var(--Light-lavender);
+    font-size: 14px;
+    width: 75%;
+    text-align: center;
+}
+
+.container>.summary {
+    flex: 1;
+    padding: 20px 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.container>.summary .header {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.container>.summary .section {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+.container>.summary .section i {
+    margin-right: 10px;
+}
+
+.container>.summary .section .result {
+    color: var(--Light-lavender);
+    font-weight: bold;
+}
+
+.container>.summary .section .result span {
+    color: #000;
+    font-weight: 700;
+}
+
+.container>.summary .reaction {
+    color: var(--Light-red);
+    background-color: #ff575718;
+}
+
+.container>.summary .memory {
+    color: var(--Orangey-yellow);
+    background-color: #ffb01f18;
+}
+
+.container>.summary .verbal {
+    color: var(--Green-teal);
+    background-color: #00bd9118;
+}
+
+.container>.summary .visual {
+    color: var(--Cobalt-blue);
+    background-color: #1125d418;
+}
+
+.container>.summary .btn {
+    text-align: center;
+    color: var(--White);
+    background-color: var(--Dark-gray-blue);
+    padding-block: 10px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.container>.summary .btn:hover {
+    background-image: linear-gradient(#7857ff, #2e2be9)
+}
+
+@media (max-width: 640px) {
+    .container {
+        width: 480px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        flex-direction: column;
+        width: 100%;
+        top: 0;
+        left: 0;
+        transform: none;
+        box-shadow: none;
+    }
+
+    .container>.result {
+        border-radius: 0 0 20px 20px;
+        padding-block: 40px;
+    }
+}
